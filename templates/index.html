@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    #<title>WELCOME TO iBOS Technical Room Detection</title>
+    <title>HERE you will see real time object detection of Support Team , AI Team </title>
+    <style>
+        body {
+
+            background-color: #1e1b4b;   /* Deep purple */
+            color: #f1f5f9;              /* Soft white */
+            text-align: center;
+            font-family: Arial;
+        }
+        img {
+
+            width: 75%;
+            border: 5px solid #a78bfa;   /* Light violet border */
+            border-radius: 15px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>WELCOME TO iBOS Technical Room Detection</h1>
+<p>HERE you will see real time object detection of Support Team , AI Team </p>
+
+<img src="{{ url_for('video_feed') }}">
+
+</body>
+</html>
