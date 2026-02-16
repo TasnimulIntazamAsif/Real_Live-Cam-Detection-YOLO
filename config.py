@@ -1,6 +1,6 @@
 # IP Camera RTSP URL
-#CAMERA_SOURCE = "rtsp://admin:boss321%23@192.168.2.42:554/cam/realmonitor?channel=1&subtype=0"
-CAMERA_SOURCE = "rtsp://admin:boss321%23@192.168.2.62:554/cam/realmonitor?channel=1&subtype=0"
+CAMERA_SOURCE = "rtsp://admin:boss321%23@192.168.2.42:554/cam/realmonitor?channel=1&subtype=0"
+#CAMERA_SOURCE = "rtsp://admin:boss321%23@192.168.2.62:554/cam/realmonitor?channel=1&subtype=0"
 
 # YOLO model
 #YOLO_MODEL = "yolov8n.pt"
