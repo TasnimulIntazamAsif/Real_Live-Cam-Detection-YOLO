@@ -2,30 +2,51 @@ import cv2
 import time
 
 
-def draw_boxes(frame, human_boxes, object_boxes):
-    for (x1, y1, x2, y2) in human_boxes:
-        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+def draw_boxes(frame, movement_data):
 
-    for (x1, y1, x2, y2) in object_boxes:
-        cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)
+    for box, moving in movement_data:
+        x1, y1, x2, y2 = box
+
+        if moving:
+            color = (0, 0, 255)  # Red for moving
+            label = "Moving"
+        else:
+            color = (0, 255, 0)  # Green for static
+            label = "Static"
+
+        cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
+        cv2.putText(frame, label,
+                    (x1, y1 - 10),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.6,
+                    color,
+                    2)
 
     return frame
 
 
 def draw_info(frame, human_count, object_count, start_time):
-    elapsed = int(time.time() - start_time)
+    elapsed_time = int(time.time() - start_time)
 
-    h = elapsed // 3600
-    m = (elapsed % 3600) // 60
-    s = elapsed % 60
+    cv2.putText(frame, f"Humans: {human_count}",
+                (20, 40),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.8,
+                (255, 255, 255),
+                2)
 
-    cv2.putText(frame, f"Human Count: {human_count}",
-                (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+    cv2.putText(frame, f"Objects: {object_count}",
+                (20, 70),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.8,
+                (255, 255, 255),
+                2)
 
-    cv2.putText(frame, f"Object Count: {object_count}",
-                (20, 80), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
-
-    cv2.putText(frame, f"Working Time: {h:02d}:{m:02d}:{s:02d}",
-                (20, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 255), 2)
+    cv2.putText(frame, f"Time: {elapsed_time}s",
+                (20, 100),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.8,
+                (255, 255, 255),
+                2)
 
     return frame
