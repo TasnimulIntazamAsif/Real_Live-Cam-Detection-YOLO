@@ -1,6 +1,7 @@
 import cv2
 
-rtsp_url = "rtsp://admin:boss321%23@192.168.2.42:554/cam/realmonitor?channel=1&subtype=0"
+#tsp_url = "rtsp://admin:boss321%23@192.168.2.42:554/cam/realmonitor?channel=1&subtype=0"
+rtsp_url = "rtsp://admin:boss321%23@192.168.2.62:554/cam/realmonitor?channel=1&subtype=0"
 
 cap = cv2.VideoCapture(rtsp_url, cv2.CAP_FFMPEG)
 
