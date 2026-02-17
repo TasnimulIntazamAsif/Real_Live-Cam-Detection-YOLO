@@ -4,6 +4,10 @@ A real-time object detection and human movement monitoring system built using YO
 This system processes live RTSP CCTV streams, performs object detection with tracking, and displays movement duration along with real-time FPS.
 
 ---
+<img width="2253" height="1256" alt="Screenshot 2026-02-17 105040" src="https://github.com/user-attachments/assets/5243a8ef-9c41-4663-95b3-f438eaa64057" />
+<img width="2236" height="1242" alt="Screenshot 2026-02-17 105302" src="https://github.com/user-attachments/assets/cdfb1fe0-2a90-479c-aeb5-afb076843f78" />
+
+
 
 ## 🚀 Features
 
