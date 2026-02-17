@@ -1,6 +1,6 @@
 # 🎥 Real-Time CCTV Detection & Movement Tracking System
 
-A real-time object detection and human movement monitoring system built using YOLOv8,YOLO26N,YOLO26S Flask, and OpenCV.  
+A real-time object detection and human movement monitoring system built using YOLOv8,YOLO26s,YOLO26n Flask, and OpenCV.  
 This system processes live RTSP CCTV streams, performs object detection with tracking, and displays movement duration along with real-time FPS.
 
 ---
